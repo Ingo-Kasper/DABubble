@@ -18,11 +18,11 @@ export class RegistrierenComponent {
   http = inject(HttpClient);
   router = inject(Router);
 
-  form = this.fb,nonNullable.group({
+  form = this.fb.nonNullable.group({
     Username: ['', Validators.required],
     email: ['', Validators.required],
     password: ['', Validators.required]
-  })
+  });
 
   onSubmit(): void {
     console.log('Registriert');
