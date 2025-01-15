@@ -13,9 +13,6 @@ import { AuthService } from '../auth.service';
 })
 export class RegistrierenComponent {
 
-    /**
-   * @fb muss noch inject werden und schauen was genau das macht
-   */
   fb = inject(FormBuilder);
   http = inject(HttpClient);
   authService = inject(AuthService)
