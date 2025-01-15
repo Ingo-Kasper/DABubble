@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from 'express';
 
 @Component({
@@ -11,16 +12,13 @@ import { Router } from 'express';
 })
 export class LoginComponent {
   
-  /**
-   * @fb muss noch inject werden und schauen was genau das macht
-   */
   fb = inject(FormBuilder);
   http = inject(HttpClient);
   router = inject(Router);
 
   form = this.fb.nonNullable.group({
     email: ['', Validators.required],
-    password: ['', Validators.required]
+    password: ['', Validators.required],
   });
 
   onSubmit(): void {
