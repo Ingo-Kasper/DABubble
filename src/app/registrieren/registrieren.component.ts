@@ -1,13 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from 'express';
 import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-registrieren',
   standalone: true,
-  imports: [],
+  imports: [ReactiveFormsModule],
   templateUrl: './registrieren.component.html',
   styleUrl: './registrieren.component.scss'
 })
