@@ -10,6 +10,7 @@ import { Router } from 'express';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
+  
   /**
    * @fb muss noch inject werden und schauen was genau das macht
    */
@@ -17,12 +18,12 @@ export class LoginComponent {
   http = inject(HttpClient);
   router = inject(Router);
 
-  form =this.fb.nonNullable.group({
+  form = this.fb.nonNullable.group({
     email: ['', Validators.required],
     password: ['', Validators.required]
   });
 
-  onSubmit() {
+  onSubmit(): void {
     console.log('submit');
   }
 }
