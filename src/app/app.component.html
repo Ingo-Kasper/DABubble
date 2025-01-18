@@ -1,10 +1,15 @@
 <div>
-  <a routerLink="/login">Login</a> <br>
-  <a routerLink="/registrieren">Registrieren</a>
+  <!-- Link zur Login-Seite -->
+  <a routerLink="/login">Login</a> <br> <!-- RouterLink navigiert zur Login-Komponente -->
+  <!-- Link zur Registrieren-Seite -->
+  <a routerLink="/registrieren">Registrieren</a> <!-- RouterLink navigiert zur Registrieren-Komponente -->
 </div>
 
+<!-- Logout-Bereich -->
 <div>
-  <span (click)="logout()"></span>
+  <!-- Klickbarer Bereich für Logout -->
+  <span (click)="logout()"></span> <!-- Klick-Event, das die Methode logout() in der AppComponent aufruft -->
 </div>
 
-<router-outlet></router-outlet>
+<!-- Platzhalter für geroutete Inhalte -->
+<router-outlet></router-outlet> <!-- Container für den Inhalt der aktuell aktiven Route -->
