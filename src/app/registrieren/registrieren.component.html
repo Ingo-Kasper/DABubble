@@ -1,16 +1,29 @@
 <h2>Registrieren</h2>
 
+<!-- Formular mit Angular-Formularbindung -->
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <!-- Eingabefeld für den Benutzernamen -->
     <div>
+        <!-- 'formControlName="Username"' bindet das Eingabefeld an das 'Username'-Formularsteuerungselement -->
         <input type="text" placeholder="Username" formControlName="Username">
     </div>
+
+    <!-- Eingabefeld für die E-Mail-Adresse -->
     <div>
+        <!-- 'formControlName="Email"' bindet das Eingabefeld an das 'Email'-Formularsteuerungselement -->
         <input type="text" placeholder="Email" formControlName="Email">
     </div>
+
+    <!-- Eingabefeld für das Passwort -->
     <div>
+        <!-- 'formControlName="Password"' bindet das Eingabefeld an das 'Password'-Formularsteuerungselement -->
         <input type="password" placeholder="Password" formControlName="Password">
     </div>
+
+    <!-- Absende-Schaltfläche für das Formular -->
     <div>
+        <!-- Beim Klick auf die Schaltfläche wird das 'ngSubmit'-Event ausgelöst, 
+             das die 'onSubmit()'-Methode in der zugehörigen Komponente aufruft -->
         <button type="submit">Sign Up</button>
     </div>
 </form>
