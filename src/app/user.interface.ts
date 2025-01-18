@@ -1,4 +1,4 @@
 export interface UserInterface {
-    eamail: string;
-    username: string;
+    email: string;  // Die E-Mail-Adresse des Benutzers.
+    username: string;  // Der Benutzername des Benutzers.
 }
