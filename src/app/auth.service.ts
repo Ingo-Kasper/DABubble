@@ -15,6 +15,10 @@ export class AuthService {
     username: string, 
     password:string)
     : Observable<void> {
+      /**
+       * @createUserWithEmailAndPassword 
+       * erzeugt einen neuen Benutzer mit einer E-Mail-Adresse und einem Passwort.
+       */
     const promise = createUserWithEmailAndPassword(
       this.firebaseAuth, 
       email, 
@@ -22,7 +26,6 @@ export class AuthService {
     ).then((response) =>
       updateProfile(response.user, { displayName: username }),
     );
-
     return from(promise);
   }
 
