@@ -4,7 +4,7 @@ import { RouterLink, RouterOutlet } from '@angular/router'; // Erlaubt das Einbi
 @Component({
   selector: 'app-root', // Der HTML-Tag, der diese Komponente repräsentiert
   standalone: true, // Standalone-Komponenten benötigen kein Angular-Modul (ab Angular 14 möglich)
-  imports: [RouterOutlet, RouterOutlet, RouterLink], // Importiert zusätzliche Angular-Module für diese Komponente, hier RouterOutlet für Routing
+  imports: [RouterOutlet, RouterLink], // Importiert zusätzliche Angular-Module für diese Komponente, hier RouterOutlet für Routing
   templateUrl: './app.component.html', // Verweist auf die HTML-Vorlage der Komponente
   styleUrl: './app.component.scss' // Verweist auf die CSS-Datei der Komponente
 })
