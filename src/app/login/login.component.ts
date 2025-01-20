@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core'; // Basis für die Erstellung einer Angular-Komponente
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms'; // Werkzeuge für reaktive Formulare
+import { Router } from '@angular/router';
 
 /** 
  * Dekorator, der die Metadaten für die `LoginComponent` definiert.
@@ -16,9 +17,9 @@ export class LoginComponent {
    * Instanz des FormBuilder, um Formulare dynamisch zu erstellen.
    */
   fb = inject(FormBuilder);
+  router = inject(Router);
 
   // http = inject(HttpClient);
-  // router = inject(Router);
 
   /**
    * Reaktives Formular mit den Feldern `email` und `password`.

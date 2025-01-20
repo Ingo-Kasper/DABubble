@@ -1,6 +1,8 @@
 import { Component, inject } from '@angular/core'; // Basis für die Erstellung einer Angular-Komponente
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms'; // Werkzeuge für reaktive Formulare und Validierung
 import { AuthService } from '../auth.service'; // Authentifizierungsservice, um die Registrierung zu handhaben
+import { routes } from '../app.routes';
+import { Router } from '@angular/router';
 
 /**
  * Dekorator, der die Metadaten für die `RegistrierenComponent` definiert.
@@ -17,6 +19,7 @@ export class RegistrierenComponent {
    * Instanz des FormBuilder, um Formulare dynamisch zu erstellen.
    */
   fb = inject(FormBuilder);
+  router = inject(Router);
 
   /**
    * Instanz des AuthService, um Registrierungsvorgänge durchzuführen.
