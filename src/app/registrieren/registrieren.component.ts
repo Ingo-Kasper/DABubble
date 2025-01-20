@@ -35,7 +35,7 @@ export class RegistrierenComponent {
   onSubmit(): void {
     const rawForm = this.form.getRawValue();
     this.authService.register(rawForm.Email, rawForm.Username , rawForm.Password).subscribe(() => {
-      this.router.navigateByUrl('/');
+      this.router.navigateByUrl('/'); // Hier die Navigation definieren
     })
   }
 }
