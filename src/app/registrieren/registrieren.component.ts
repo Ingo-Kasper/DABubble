@@ -29,9 +29,8 @@ export class RegistrierenComponent {
     Password: ['', Validators.required],
   });
 
-  /**
-   * Methode, die aufgerufen wird, wenn das Formular abgesendet wird.
-   * Aktuell wird nur eine Nachricht in der Konsole ausgegeben.
+   /**
+   * Registriert den Benutzer und leitet anschließend zur Startseite weiter.
    */
   onSubmit(): void {
     const rawForm = this.form.getRawValue();
