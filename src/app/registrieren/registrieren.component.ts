@@ -24,10 +24,10 @@ export class RegistrierenComponent {
   /**
    * Instanz des AuthService, um Registrierungsvorgänge durchzuführen.
    */
-  // authService = inject(AuthService);
+  authService = inject(AuthService);
   
   // http = inject(HttpClient);
-  // router = inject(Router);
+
 
   /**
    * Reaktives Formular mit den Feldern `Username`, `email` und `password`.
@@ -44,7 +44,9 @@ export class RegistrierenComponent {
    * Aktuell wird nur eine Nachricht in der Konsole ausgegeben.
    */
   onSubmit(): void {
-    console.log('Registriert'); // Gibt eine Meldung aus, wenn das Formular abgesendet wird
-    // Hier könnte die Logik hinzugefügt werden, um die Benutzerdaten an den Server zu senden.
+    const rawForm = this.form.getRawValue();
+    this.authService.register(rawForm.Email, rawForm.Username , rawForm.Password).subscribe(() => {
+      this.router.navigateByUrl('/');
+    })
   }
 }
