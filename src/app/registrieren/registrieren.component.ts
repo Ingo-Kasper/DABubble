@@ -1,7 +1,5 @@
-import { HttpClient } from '@angular/common/http'; // Ermöglicht HTTP-Anfragen
 import { Component, inject } from '@angular/core'; // Basis für die Erstellung einer Angular-Komponente
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms'; // Werkzeuge für reaktive Formulare und Validierung
-import { Router } from 'express'; // Router zur Navigation zwischen Seiten
 import { AuthService } from '../auth.service'; // Authentifizierungsservice, um die Registrierung zu handhaben
 
 /**
@@ -21,19 +19,12 @@ export class RegistrierenComponent {
   fb = inject(FormBuilder);
 
   /**
-   * Instanz des HttpClient, um HTTP-Anfragen zu stellen.
-   */
-  http = inject(HttpClient);
-
-  /**
    * Instanz des AuthService, um Registrierungsvorgänge durchzuführen.
    */
-  authService = inject(AuthService);
-
-  /**
-   * Instanz des Routers, um nach erfolgreicher Registrierung zu einer anderen Seite zu navigieren.
-   */
-  router = inject(Router);
+  // authService = inject(AuthService);
+  
+  // http = inject(HttpClient);
+  // router = inject(Router);
 
   /**
    * Reaktives Formular mit den Feldern `Username`, `email` und `password`.
@@ -41,8 +32,8 @@ export class RegistrierenComponent {
    */
   form = this.fb.nonNullable.group({
     Username: ['', Validators.required], // Feld für den Benutzernamen
-    email: ['', Validators.required], // Feld für die E-Mail-Adresse
-    password: ['', Validators.required] // Feld für das Passwort
+    Email: ['', Validators.required], // Feld für die E-Mail-Adresse
+    Password: ['', Validators.required] // Feld für das Passwort
   });
 
   /**
